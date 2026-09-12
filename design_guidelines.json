@@ -1,0 +1,261 @@
+{
+  "project_name": "SI-JADWAL & PRESENSI RUANGAN PUSKESMAS (Aplikasi Penyusun Jadwal Kegiatan Luar & Tracking Keluar-Masuk Pegawai)",
+  "app_type": "dashboard / internal government health clinic tool",
+  "theme": "light",
+  "language": "id (Bahasa Indonesia)",
+  "design_archetype": "ARCHETYPE 1: ORGANIC & EARTHY HEALTH INSTITUTION (Trust, Precision, Health & Government Standards)",
+  "typography": {
+    "font_pairing_strategy": "Official Indonesian Health Standard - Modern Editorial Hybrid",
+    "heading_font": "Plus Jakarta Sans, sans-serif (Weights: 600, 700, 800)",
+    "body_font": "Work Sans, sans-serif (Weights: 400, 500, 600)",
+    "mono_font": "JetBrains Mono, monospace (For NIP, Kode Ruangan, & Tanggal)",
+    "font_imports_css": "@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&family=Work+Sans:wght@400;500;600;700&display=swap');",
+    "font_rules": [
+      "Headings MUST use Plus Jakarta Sans with tight tracking (tracking-tight) for an authoritative government health institution feel.",
+      "Body text MUST use Work Sans with clean line height (leading-relaxed) for optimal legibility.",
+      "DO NOT use Inter or Roboto for headings.",
+      "H1 size ceiling: text-3xl sm:text-4xl lg:text-5xl (DO NOT exceed text-5xl)."
+    ]
+  },
+  "colors": {
+    "palette_name": "Puskesmas Emerald & Slate Official Light Palette",
+    "primary": {
+      "emerald_main": "#059669",
+      "emerald_dark": "#047857",
+      "emerald_light": "#10B981",
+      "emerald_soft_bg": "#ECFDF5",
+      "emerald_border": "#A7F3D0"
+    },
+    "secondary_accent": {
+      "teal_accent": "#0D9488",
+      "amber_warning": "#D97706",
+      "rose_danger": "#E11D48",
+      "blue_info": "#0284C7"
+    },
+    "neutrals": {
+      "bg_main": "#F8FAFC",
+      "bg_surface": "#FFFFFF",
+      "bg_subtle": "#F1F5F9",
+      "border_default": "#E2E8F0",
+      "border_strong": "#CBD5E1",
+      "text_primary": "#0F172A",
+      "text_secondary": "#475569",
+      "text_muted": "#64748B"
+    },
+    "status_colors": {
+      "inside_building": {
+        "bg": "#ECFDF5",
+        "text": "#047857",
+        "border": "#A7F3D0",
+        "dot": "#10B981",
+        "label": "Di Dalam Gedung (Hadir)"
+      },
+      "outside_activity": {
+        "bg": "#FFFBEB",
+        "text": "#B45309",
+        "border": "#FDE68A",
+        "dot": "#F59E0B",
+        "label": "Tugas Luar Gedung"
+      },
+      "conflict_alert": {
+        "bg": "#FEF2F2",
+        "text": "#B91C1C",
+        "border": "#FECACA",
+        "dot": "#EF4444",
+        "label": "Bentrok Tanggal (Terblokir)"
+      },
+      "approval_pending": {
+        "bg": "#EFF6FF",
+        "text": "#1D4ED8",
+        "border": "#BFDBFE",
+        "label": "Menunggu Persetujuan"
+      },
+      "approval_approved": {
+        "bg": "#ECFDF5",
+        "text": "#047857",
+        "border": "#A7F3D0",
+        "label": "Disetujui"
+      },
+      "approval_rejected": {
+        "bg": "#FEF2F2",
+        "text": "#B91C1C",
+        "border": "#FECACA",
+        "label": "Ditolak"
+      }
+    },
+    "forbidden_colors": [
+      "#7351B7 (Purple AI gradient)",
+      "#1B93A4 (Teal dashboard forbidden color)"
+    ]
+  },
+  "rooms_list": [
+    {
+      "id": "ruang-tu",
+      "name": "Ruangan TU (Klaster Manajemen)",
+      "category": "Manajemen & TU",
+      "code": "TU-KM"
+    },
+    {
+      "id": "ruang-klaster-3",
+      "name": "Ruang Klaster 3",
+      "category": "Pelayanan Usia Dewasa & Lansia",
+      "code": "KL-03"
+    },
+    {
+      "id": "ruang-klaster-2-ibu",
+      "name": "Ruang Klaster 2 Ibu",
+      "category": "Pelayanan Kesehatan Ibu",
+      "code": "KL2-IBU"
+    },
+    {
+      "id": "ruang-klaster-2-anak",
+      "name": "Ruang Klaster 2 Anak",
+      "category": "Pelayanan Kesehatan Anak",
+      "code": "KL2-ANK"
+    },
+    {
+      "id": "ruang-imunisasi",
+      "name": "Ruang Imunisasi",
+      "category": "Pencegahan & Imunisasi",
+      "code": "RM-IMN"
+    },
+    {
+      "id": "ruang-klaster-gigi",
+      "name": "Ruang Klaster Gigi dan Mulut",
+      "category": "Kesehatan Gigi & Mulut",
+      "code": "KL-GGI"
+    },
+    {
+      "id": "meja-skrining",
+      "name": "Meja Skrining",
+      "category": "Triase & Skrining Awal",
+      "code": "MJ-SKR"
+    },
+    {
+      "id": "ruang-tindakan",
+      "name": "Ruang Tindakan",
+      "category": "Gawat Darurat & Tindakan",
+      "code": "RM-TND"
+    },
+    {
+      "id": "ruang-laboratorium",
+      "name": "Ruang Laboratorium",
+      "category": "Penunjang Medis",
+      "code": "RM-LAB"
+    },
+    {
+      "id": "ruang-farmasi",
+      "name": "Ruang Farmasi",
+      "category": "Kefarmasian & Obat",
+      "code": "RM-FRM"
+    },
+    {
+      "id": "loket",
+      "name": "Loket",
+      "category": "Pelayanan Informasi & Administrasi",
+      "code": "LKT-01"
+    },
+    {
+      "id": "pendaftaran-antrian",
+      "name": "Pendaftaran Antrian",
+      "category": "Pendaftaran Pasien",
+      "code": "PDF-ANT"
+    },
+    {
+      "id": "klaster-4",
+      "name": "Klaster 4",
+      "category": "Penanggulangan Penyakit Menular",
+      "code": "KL-04"
+    }
+  ],
+  "key_features_and_ui_components": {
+    "top_header_and_navigation": {
+      "title": "Sistem Informasi Jadwal Luar & Presensi Ruangan Puskesmas",
+      "badge": "Kemenkes RI / Dinas Kesehatan",
+      "role_switcher": "Peran Aktif: [Petugas Operational / Staf TU] | [Kepala TU] | [Kepala Puskesmas]",
+      "date_selector": "Live Filter Tanggal Presensi Ruangan & Kegiatan",
+      "quick_stats_bar": "Summary counter: Total Pegawai, Di Dalam Gedung, Kegiatan Luar, Menunggu Approval"
+    },
+    "feature_1_dashboard_keluar_masuk_ruangan": {
+      "description": "Papan Status Real-time Keluar/Masuk Pegawai per 13 Ruangan Puskesmas.",
+      "layout": "Bento Grid Cards / Table View dengan Switcher per Klaster / Ruangan.",
+      "room_card_content": [
+        "Nama Ruangan & Kode Klaster",
+        "Badge Jumlah Pegawai: Hadir di Gedung vs Tugas Luar",
+        "Daftar Pegawai Di Dalam Gedung (Lengkap dengan Nama, NIP, Jabatan, Avatar)",
+        "Daftar Pegawai Tugas Luar (Lengkap dengan Nama, NIP, Nama Kegiatan Luar, Lokasi, Status Approval)"
+      ],
+      "data_testids": {
+        "room_card": "room-card-{id}",
+        "status_badge_inside": "status-badge-inside-{id}",
+        "status_badge_outside": "status-badge-outside-{id}",
+        "staff_item": "staff-item-{nip}"
+      }
+    },
+    "feature_2_manajemen_pegawai": {
+      "description": "CRUD Pegawai + Import dari Excel, PDF, Word.",
+      "fields": ["NIP/NIK", "Nama Lengkap", "Jabatan/Profesi", "Ruangan Utama", "No Telepon / WA", "Status Kepegawaian"],
+      "import_modal": "File dropzone supporting .xlsx, .xls, .pdf, .docx, .doc, .csv with parser preview and validation table before saving."
+    },
+    "feature_3_penyusunan_jadwal_kegiatan_luar": {
+      "description": "Form Tambah/Edit Kegiatan Luar dengan Blokir Total Bentrok Tanggal (Strict Double-Date Validation).",
+      "conflict_validation_rule": "Sistem secara otomatis mengecek seluruh jadwal terdaftar untuk pegawai yang dipilih. Jika pegawai sudah memiliki agenda tugas luar / kegiatan pada rentang tanggal yang dipilih, tombol SIMPAN DIBLOKIR TOTAL dan muncul banner Peringatan Merah dengan detail bentrok.",
+      "fields": [
+        "Nama Kegiatan Luar (misal: Posyandu Balita / Bulan Imunisasi Anak Sekolah / Pusling / Pelatihan)",
+        "Tanggal Mulai & Tanggal Selesai",
+        "Lokasi / Faskes Tujuan",
+        "Pegawai yang Ditugaskan (Multi-select / Single select dengan indikator status tanggal)",
+        "Keterangan / Output Kegiatan"
+      ]
+    },
+    "feature_4_import_jadwal_file": {
+      "description": "Import Jadwal Kegiatan Luar dari Excel / PDF / Word.",
+      "features": [
+        "Drag & Drop File (.xlsx, .pdf, .docx)",
+        "Preview Tabel Extracted Data sebelum Submit",
+        "Deteksi Bentrok Otomatis pada file import (Baris yang bentrok akan di-highlight merah dengan opsi 'Lewati' atau 'Ganti Pegawai')"
+      ]
+    },
+    "feature_5_panel_approval": {
+      "description": "Persetujuan Satu Tahap oleh Kepala TU atau Kepala Puskesmas.",
+      "functionality": [
+        "Filter berdasarkan status: Menunggu Approval, Disetujui, Ditolak",
+        "Tombol Aksi Cepat: 'Setujui' (Emerald) & 'Tolak' dengan Alasan (Rose)",
+        "Notifikasi Sonner Toast saat approval berhasil diselesaikan"
+      ]
+    },
+    "feature_6_kalender_and_timeline": {
+      "description": "Tampilan Kalender Bulanan & Timeline Mingguan Kegiatan Luar Pegawai.",
+      "features": [
+        "Filter per Ruangan / Per Pegawai",
+        "Color-coded badges berdasarkan status approval",
+        "Click to view detail modal kegiatan"
+      ]
+    }
+  },
+  "image_urls": {
+    "avatars": [
+      "https://images.unsplash.com/photo-1659353888906-adb3e0041693?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNDR8MHwxfHNlYXJjaHwxfHxpbmRvbmVzaWFuJTIwaGVhbHRoY2FyZSUyMGRvY3RvciUyMG51cnNlJTIwYXZhdGFyfGVufDB8fHx8MTc4OTE3NDY2N3ww&ixlib=rb-4.1.0&q=85",
+      "https://images.unsplash.com/photo-1622902046580-2b47f47f5471?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNDR8MHwxfHNlYXJjaHwyfHxpbmRvbmVzaWFuJTIwaGVhbHRoY2FyZSUyMGRvY3RvciUyMG51cnNlJTIwYXZhdGFyfGVufDB8fHx8MTc4OTE3NDY2N3ww&ixlib=rb-4.1.0&q=85",
+      "https://images.unsplash.com/photo-1734002886107-168181bcd6a1?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNDR8MHwxfHNlYXJjaHszfHxpbmRvbmVzaWFuJTIwaGVhbHRoY2FyZSUyMGRvY3RvciUyMG51cnNlJTIwYXZhdGFyfGVufDB8fHx8MTc4OTE3NDY2N3ww&ixlib=rb-4.1.0&q=85",
+      "https://images.unsplash.com/photo-1652946595755-74fd7fdccb79?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNDR8MHwxfHNlYXJjaHw0fHxpbmRvbmVzaWFuJTIwaGVhbHRoY2FyZSUyMGRvY3RvciUyMG51cnNlJTIwYXZhdGFyfGVufDB8fHx8MTc4OTE3NDY2N3ww&ixlib=rb-4.1.0&q=85"
+    ],
+    "clinic_hero": "https://images.unsplash.com/photo-1617687435443-611372332956?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzJ8MHwxfHNlYXJjaHw0fHxtZWRpY2FsJTIwY2xpbmljJTIwaGVhbHRoJTIwY2VudGVyJTIwYnVpbGRpbmclMjBpbmRvbmVzaWF8ZW58MHx8fHwxNzg5MTc0NjcxfDA&ixlib=rb-4.1.0&q=85"
+  },
+  "instructions_to_main_agent": [
+    "IMPORTANT: All React component files in frontend/src/ are JavaScript (.js / .jsx), NOT TypeScript (.tsx). Use standard JSX syntax.",
+    "Implement Sonner toast notifications for all CRUD actions, import success, and approval state updates.",
+    "Implement strict double-date conflict detection on client-side state and backend API. Show clear visual feedback if a staff member is assigned on an overlapping date.",
+    "Support file import parsing simulation for Excel, PDF, and Word documents in frontend with parsed preview tables and dummy sample generators so users can test immediately.",
+    "Ensure all 13 Puskesmas rooms listed in rooms_list are present in the room tracking dashboard with accurate counts of inside vs outside personnel.",
+    "Include role switcher buttons (Petugas TU, Kepala TU, Kepala Puskesmas) at the header so anyone can test approval workflows without needing a login wall.",
+    "Every key interactive element MUST contain clear data-testid attributes formatted in lower-kebab-case (e.g., data-testid=\"btn-tambah-jadwal\", data-testid=\"room-card-ruang-tu\", data-testid=\"approval-approve-btn-{id}\")."
+  ],
+  "UNIVERSAL GUIDELINES FOR MAIN AGENT": [
+    "Never center align the main application container.",
+    "Do NOT use universal transition 'transition: all'. Apply specific transitions on hover/focus.",
+    "Use generous padding and spacing (p-6, p-8) on cards and containers with borders.",
+    "Maintain high APCA text contrast against light backgrounds (minimum 4.5:1).",
+    "Keep icons clean using lucide-react or phosphor icons. No emoji-only icons."
+  ]
+}
