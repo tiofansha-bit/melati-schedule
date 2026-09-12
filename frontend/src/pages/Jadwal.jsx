@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { api, formatTanggal, STATUS_LABEL, STATUS_STYLE } from "@/lib/api";
 import { toast } from "sonner";
-import { Plus, Upload, Pencil, Trash2, AlertTriangle, FileSpreadsheet, X } from "lucide-react";
+import { Plus, Upload, Pencil, Trash2, AlertTriangle, FileSpreadsheet, X, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -259,15 +259,25 @@ export default function Jadwal() {
           </DialogHeader>
           <input ref={fileRef} type="file" accept=".xlsx,.xls,.csv,.pdf,.docx" className="hidden" onChange={pickFile} data-testid="jadwal-import-file-input" />
           {!preview ? (
-            <button
-              onClick={() => fileRef.current?.click()}
-              className="border-2 border-dashed border-slate-300 rounded-xl p-10 w-full text-center hover:border-emerald-400 hover:bg-emerald-50/40 transition-colors"
-              data-testid="jadwal-import-dropzone"
-            >
-              <FileSpreadsheet size={32} className="mx-auto text-slate-400 mb-3" />
-              <p className="text-sm font-medium text-slate-700">Klik untuk memilih file</p>
-              <p className="text-xs text-slate-400 mt-1">Format: .xlsx, .xls, .csv, .pdf, .docx — kolom: Kegiatan, Tanggal Mulai, Tanggal Selesai, Lokasi, Pegawai, Keterangan</p>
-            </button>
+            <div className="space-y-3">
+              <button
+                onClick={() => fileRef.current?.click()}
+                className="border-2 border-dashed border-slate-300 rounded-xl p-10 w-full text-center hover:border-emerald-400 hover:bg-emerald-50/40 transition-colors"
+                data-testid="jadwal-import-dropzone"
+              >
+                <FileSpreadsheet size={32} className="mx-auto text-slate-400 mb-3" />
+                <p className="text-sm font-medium text-slate-700">Klik untuk memilih file</p>
+                <p className="text-xs text-slate-400 mt-1">Format: .xlsx, .xls, .csv, .pdf, .docx — kolom: Kegiatan, Tanggal Mulai, Tanggal Selesai, Lokasi, Pegawai, Keterangan</p>
+              </button>
+              <a
+                href="/templates/template-import-jadwal.xlsx"
+                download
+                className="flex items-center justify-center gap-2 w-full px-4 py-2.5 rounded-lg border border-emerald-200 bg-emerald-50 text-emerald-700 text-sm font-medium hover:bg-emerald-100 transition-colors"
+                data-testid="jadwal-download-template"
+              >
+                <Download size={15} /> Unduh Template Excel Jadwal
+              </a>
+            </div>
           ) : (
             <div className="space-y-3">
               <div className="flex items-center justify-between">
